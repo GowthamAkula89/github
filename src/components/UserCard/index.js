@@ -3,7 +3,7 @@ import "./userCard.css";
 import axios from "axios";
 const UserCard = ({user,handleReposOnClick,handleFollowsOnClick, isFollower}) => {
     const [userData,setUserData]=useState([]);
-    const accessToken = "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";
+    const accessToken = "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";
     const headers = {
         Authorization: `Bearer ${accessToken}`,
     };
@@ -11,7 +11,7 @@ const UserCard = ({user,handleReposOnClick,handleFollowsOnClick, isFollower}) =>
         loadUser()
     },[]);
     const loadUser = async()=>{
-        const response =await axios.get(user.url,{headers});
+        const response =await axios.get(user.url);
         setUserData(response.data);
     }
     return(

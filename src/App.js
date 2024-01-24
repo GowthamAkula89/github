@@ -28,7 +28,7 @@ function App() {
   },[])
   const loadUser= async()=>{
     try{
-      const response=await axios.get(url,{ headers });
+      const response=await axios.get(url);
       setUsers(response.data);
     }catch(err){
       console.log(err);
@@ -37,7 +37,7 @@ function App() {
   }
   const getUser = async(user)=>{
     try{
-      const response = await axios.get(user.url,{ headers });
+      const response = await axios.get(user.url);
       setSelectedUser(response.data);
       setIsReposPage(false);
     }catch(err){
@@ -47,7 +47,7 @@ function App() {
   }
   const handleReposOnClick = async(user) =>{
     try{
-      const response =await axios.get(user.repos_url,{ headers });
+      const response =await axios.get(user.repos_url);
       setUserRepos(response.data);
       setSelectedUser(user);
       setIsReposPage(true);
