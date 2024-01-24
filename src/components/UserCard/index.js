@@ -4,7 +4,6 @@ import axios from "axios";
 const UserCard = ({user,handleReposOnClick,handleFollowsOnClick, isFollower}) => {
     const [userData,setUserData]=useState([]);
     const accessToken =process.env.REACT_APP_GITHUB_ACCESS_TOKEN;
-    console.log("+++++++++++++");
     console.log(accessToken)
     // const accessToken = "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";
     const headers = {
