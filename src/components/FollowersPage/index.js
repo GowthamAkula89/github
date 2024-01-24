@@ -7,7 +7,12 @@ const FollowersPage=({user,userFollowers,handleReposOnClick,handleFollowsOnClick
             <UserCard user={user} handleReposOnClick={handleReposOnClick} handleFollowsOnClick={handleFollowsOnClick}/>
             <div className="user-followers">
                 {userFollowers.map((follower)=>
-                    <UserCard user={follower} handleReposOnClick={handleReposOnClick} handleFollowsOnClick={handleFollowsOnClick} isFollower={true}/>
+                    <UserCard key={follower.id} 
+                        user={follower} 
+                        handleReposOnClick={handleReposOnClick} 
+                        handleFollowsOnClick={handleFollowsOnClick} 
+                        isFollower={true}
+                    />
                 )}
             </div>
         </div>

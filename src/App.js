@@ -10,6 +10,10 @@ import ReposPage from './components/ReposPage';
 import FollowersPage from './components/FollowersPage';
 function App() {
   const url="https://api.github.com/users"
+  const accessToken = "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";
+  const headers = {
+    Authorization: `Bearer ${accessToken}`,
+  };
   const [users,setUsers]=useState([]);
   const [selectedUser,setSelectedUser]=useState([]);
   const [userRepos,setUserRepos] = useState([]);
@@ -24,7 +28,7 @@ function App() {
   },[])
   const loadUser= async()=>{
     try{
-      const response=await axios.get(url);
+      const response=await axios.get(url,{ headers });
       setUsers(response.data);
     }catch(err){
       console.log(err);
@@ -33,7 +37,7 @@ function App() {
   }
   const getUser = async(user)=>{
     try{
-      const response = await axios.get(user.url);
+      const response = await axios.get(user.url,{ headers });
       setSelectedUser(response.data);
       setIsReposPage(false);
     }catch(err){
@@ -43,7 +47,7 @@ function App() {
   }
   const handleReposOnClick = async(user) =>{
     try{
-      const response =await axios.get(user.repos_url);
+      const response =await axios.get(user.repos_url,{ headers });
       setUserRepos(response.data);
       setSelectedUser(user);
       setIsReposPage(true);
@@ -55,7 +59,7 @@ function App() {
   }
   const handleFollowsOnClick = async(user)=>{
     try{
-      const response =await axios.get(user.followers_url);
+      const response =await axios.get(user.followers_url,{ headers });
       setUserFollowers(response.data);
       setSelectedUser(user);
       setIsFollowersPage(true);
