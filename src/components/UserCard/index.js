@@ -3,15 +3,18 @@ import "./userCard.css";
 import axios from "axios";
 const UserCard = ({user,handleReposOnClick,handleFollowsOnClick, isFollower}) => {
     const [userData,setUserData]=useState([]);
+    const accessToken =process.env.REACT_APP_GITHUB_ACCESS_TOKEN;
+    console.log("+++++++++++++");
+    console.log(accessToken)
     // const accessToken = "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";
-    // const headers = {
-    //     Authorization: `Bearer ${accessToken}`,
-    // };
+    const headers = {
+        Authorization: `Bearer ${accessToken}`,
+    };
     useEffect(()=>{
         loadUser()
     },[]);
     const loadUser = async()=>{
-        const response =await axios.get(user.url);
+        const response =await axios.get(user.url,{headers});
         setUserData(response.data);
     }
     return(
