@@ -13,7 +13,7 @@ const UserCard = ({user,handleReposOnClick,handleFollowsOnClick, isFollower}) =>
         loadUser()
     },[]);
     const loadUser = async()=>{
-        const response =await axios.get(user.url,{headers});
+        const response =await axios.get(user.url);
         setUserData(response.data);
     }
     return(
