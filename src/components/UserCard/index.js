@@ -3,7 +3,7 @@ import "./userCard.css";
 import axios from "axios";
 const UserCard = ({user,handleReposOnClick,handleFollowsOnClick, isFollower}) => {
     const [userData,setUserData]=useState([]);
-    const accessToken = "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";
+    const accessToken = "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";
     const headers = {
         Authorization: `Bearer ${accessToken}`,
     };
