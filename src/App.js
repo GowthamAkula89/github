@@ -10,7 +10,7 @@ import ReposPage from './components/ReposPage';
 import FollowersPage from './components/FollowersPage';
 function App() {
   const url="https://api.github.com/users"
-  const accessToken = "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";
+  const accessToken = "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";
   const headers = {
     Authorization: `Bearer ${accessToken}`,
   };
@@ -69,7 +69,7 @@ function App() {
       console.log(err);
     }
   }
-  console.log(userRepos)
+  console.log(selectedUser)
   return (
     <div className="App">
       {isUsersPage &&(
