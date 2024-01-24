@@ -59,7 +59,7 @@ function App() {
   }
   const handleFollowsOnClick = async(user)=>{
     try{
-      const response =await axios.get(user.followers_urls);
+      const response =await axios.get(user.followers_url);
       setUserFollowers(response.data);
       setSelectedUser(user);
       setIsFollowersPage(true);
