@@ -1,0 +1,9 @@
+.user-repos-card{
+    display: flex;
+    gap: 25px;
+}
+.user-repos{
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}

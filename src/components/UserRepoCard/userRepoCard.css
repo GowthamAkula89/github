@@ -1,0 +1,30 @@
+.user-repo-card{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgb(118, 111, 111);
+    gap: 5px;
+    padding: 5px;
+    align-items: start;
+    border-radius: 6px;
+    box-shadow: 0px 2px 2px 0 #978888
+}
+.repo-card-title{
+    display: flex;
+}
+.repo-card-data{
+    width: 100%;
+    display: flex;
+    gap: 25px;
+}
+.repo-visibility{
+    margin-left: 26px;
+    margin-top: 2px;
+    border-radius: 9px;
+    padding: 1px;
+    font-size: 11px;
+    border: 2px solid rgb(80, 76, 76);
+}
+.repo-title{
+    font-size: large;
+    font-weight: 600;
+}
