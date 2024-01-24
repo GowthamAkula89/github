@@ -10,7 +10,7 @@ import ReposPage from './components/ReposPage';
 import FollowersPage from './components/FollowersPage';
 function App() {
   const url="https://api.github.com/users"
-  const accessToken = "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";
+  const accessToken = "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";
   const headers = {
     Authorization: `Bearer ${accessToken}`,
   };
