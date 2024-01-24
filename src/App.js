@@ -78,7 +78,10 @@ function App() {
         <>
         <SearchPage users={users} getUser={getUser}/>
         {selectedUser.length === 0 &&(
-          <UserPages users={users}  handleReposOnClick={handleReposOnClick} handleFollowsOnClick={handleFollowsOnClick}/>)
+          <UserPages users={users}  
+            handleReposOnClick={handleReposOnClick} 
+            handleFollowsOnClick={handleFollowsOnClick}
+          />)
         }
         {selectedUser.length !== 0 &&(
           <UserCard user={selectedUser} 

@@ -20,11 +20,14 @@
     margin-left: 26px;
     margin-top: 2px;
     border-radius: 9px;
-    padding: 1px;
+    padding: 0px 6px 0px 6px;
     font-size: 11px;
     border: 2px solid rgb(80, 76, 76);
+    background-color: black;
+    color: white;
 }
 .repo-title{
     font-size: large;
     font-weight: 600;
+    color: rgb(70, 82, 248);
 }
